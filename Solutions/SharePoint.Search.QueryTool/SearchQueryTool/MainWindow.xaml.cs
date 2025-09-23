@@ -7,10 +7,10 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Configuration;
 using System.Diagnostics;
-using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Security.Principal;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -88,6 +88,16 @@ namespace SearchQueryTool
             ObservableQueryCollection = new SafeObservable<SearchQueryDebug>(Dispatcher);
 
             InitializeComponent();
+            // Dynamically set window title with assembly version
+            try
+            {
+                var ver = Assembly.GetExecutingAssembly().GetName().Version;
+                if (ver != null)
+                {
+                    this.Title = $"SharePoint Search Query Tool v{ver.Major}.{ver.Minor}.{ver.Build}";
+                }
+            }
+            catch { }
             InitializeControls();
 
             HistoryFolderPath = InitDirectoryFromSetting("HistoryFolderPath", @".\History");
@@ -955,7 +965,7 @@ namespace SearchQueryTool
         /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void MenuAbout_Click(object sender, RoutedEventArgs e)
         {
-            new AboutBox().Show();
+            new AboutWindow { Owner = this }.ShowDialog();
         }
 
         #endregion

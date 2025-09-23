@@ -7,11 +7,11 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SharePoint Search Query Tool")]
-[assembly: AssemblyDescription("Use this tool to test out and debug search queries against the SharePoint 2013/2016/Online REST API.\r\n\r\nContributions by:\r\n\r\nMikael Svenson - @mikaelsvenson\r\nMaximilian Melcher - @maxmelcher\r\nBarry Waldbaum @ MSFT\r\nDan Göran Lunde - @fastlundan\r\nPetter Skodvin-Hvammen - @pettersh")]
+[assembly: AssemblyDescription("Use this tool to test, validate, and troubleshoot search queries against the SharePoint Search REST API\\r\\nfor all supported environments, including SharePoint 2013, 2016, 2019, Subscription Edition (SE),\\r\\nand SharePoint Online.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Nadeem Ishqair @ MSFT")]
+[assembly: AssemblyCompany("SharPoint Patterns & Practices (PnP-Tools)")]
 [assembly: AssemblyProduct("SharePoint Search Query Tool")]
-[assembly: AssemblyCopyright("Microsoft Public License (MS-PL)")]
+[assembly: AssemblyCopyright("MIT License (MIT)")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -50,6 +50,6 @@ using System.Windows;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.10.0.0")]
-[assembly: AssemblyFileVersion("2.10.0.0")]
+[assembly: AssemblyVersion("2.11.0.0")]
+[assembly: AssemblyFileVersion("2.11.0.0")]
 [assembly: NeutralResourcesLanguageAttribute("en")]
